@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div class="container">
+		<!-- <h1 style="text-align:center;color:black;">
+            Product Details
+	</h1> -->
+		<form [formGroup]="employeeDetailForm">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProductLabel">Employee Details</h5>
+                <button
+                  type="button"
+                  class="close pull-right"
+                  aria-label="Close"
+                  (click)="bsModalRef.hide()"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+			<div class="form-group">
+				<label for="">Id:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="id">
+			</div>
+            <div class="form-group">
+				<label for="">Name:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="name">
+			</div>
+            <div class="form-group">
+				<label for="">Company:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="company">
+			</div>
+            <div class="form-group">
+				<label for="">Designation:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="designation">
+			</div>
+            <div class="form-group">
+				<label for="">Logo:</label>
+				<img class="form-control"
+					[src]="company_logo">
+			</div>
+			<div class="form-group">
+				
+			</div>
+            <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary pull-right"
+                  aria-label="Close"
+                  (click)="bsModalRef.hide()"
+                >
+                  Close
+                </button>
+              </div>
+		</form>
+	</div>
+</body>
+
+</html>
