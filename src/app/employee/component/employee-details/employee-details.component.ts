@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Employee } from 'src/app/models/Employee';
 import { EmployeeService } from '../../service/employee.service';
 
@@ -17,10 +16,8 @@ export class EmployeeDetailsComponent implements OnInit {
     designation: string='';
     company_logo: string='';
     employee!: Employee;
-    modalRef!: BsModalRef;
   constructor(private formBuilder: FormBuilder,
-              private employeeService: EmployeeService,
-              public bsModalRef: BsModalRef,) { 
+              private employeeService: EmployeeService) { 
     this.employeeDetailForm = formBuilder.group({
       id: ['', Validators.required],
       name: ['', Validators.required],
