@@ -8,6 +8,7 @@ import { EmployeeListComponent } from './employee/component/employee-list/employ
 import { EmployeeDetailsComponent } from './employee/component/employee-details/employee-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    Ng2OrderModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
